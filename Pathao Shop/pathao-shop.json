@@ -48,7 +48,7 @@
   },
   {
     "shop_name": "Shop 2",
-    "Prouducts": [
+    "items": [
       {
         "name": "Prouduct 1",
         "description": "Description of Prouduct 1",

@@ -9,20 +9,26 @@
 /* Begin PBXBuildFile section */
 		427D70C929523A1E00751781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D70C829523A1E00751781 /* AppDelegate.swift */; };
 		427D70CB29523A1E00751781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D70CA29523A1E00751781 /* SceneDelegate.swift */; };
-		427D70CD29523A1E00751781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D70CC29523A1E00751781 /* ViewController.swift */; };
+		427D70CD29523A1E00751781 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D70CC29523A1E00751781 /* HomeScreen.swift */; };
 		427D70D029523A1E00751781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427D70CE29523A1E00751781 /* Main.storyboard */; };
 		427D70D329523A1E00751781 /* Pathao_Shop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 427D70D129523A1E00751781 /* Pathao_Shop.xcdatamodeld */; };
 		427D70D529523A2000751781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427D70D429523A2000751781 /* Assets.xcassets */; };
 		427D70D829523A2000751781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427D70D629523A2000751781 /* LaunchScreen.storyboard */; };
 		427D70E029523C6400751781 /* pathao-shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 427D70DF29523C6400751781 /* pathao-shop.json */; };
 		427D70E2295243A200751781 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D70E1295243A200751781 /* Model.swift */; };
+		A0DA0BE129532DA20077C4FE /* PathaoShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA0BDF29532DA20077C4FE /* PathaoShopList.swift */; };
+		A0DA0BE229532DA20077C4FE /* PathaoShopList.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DA0BE029532DA20077C4FE /* PathaoShopList.xib */; };
+		A0DA0BE629532DE20077C4FE /* ProductItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA0BE429532DE20077C4FE /* ProductItemCell.swift */; };
+		A0DA0BE729532DE20077C4FE /* ProductItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DA0BE529532DE20077C4FE /* ProductItemCell.xib */; };
+		A0DA0BE9295331CD0077C4FE /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA0BE8295331CD0077C4FE /* HomeScreenViewModel.swift */; };
+		A0DA0BEC295336180077C4FE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA0BEB295336180077C4FE /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		427D70C529523A1E00751781 /* Pathao Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pathao Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		427D70C829523A1E00751781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		427D70CA29523A1E00751781 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		427D70CC29523A1E00751781 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		427D70CC29523A1E00751781 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		427D70CF29523A1E00751781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		427D70D229523A1E00751781 /* Pathao_Shop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pathao_Shop.xcdatamodel; sourceTree = "<group>"; };
 		427D70D429523A2000751781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +36,12 @@
 		427D70D929523A2000751781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		427D70DF29523C6400751781 /* pathao-shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pathao-shop.json"; sourceTree = "<group>"; };
 		427D70E1295243A200751781 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A0DA0BDF29532DA20077C4FE /* PathaoShopList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathaoShopList.swift; sourceTree = "<group>"; };
+		A0DA0BE029532DA20077C4FE /* PathaoShopList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathaoShopList.xib; sourceTree = "<group>"; };
+		A0DA0BE429532DE20077C4FE /* ProductItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemCell.swift; sourceTree = "<group>"; };
+		A0DA0BE529532DE20077C4FE /* ProductItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemCell.xib; sourceTree = "<group>"; };
+		A0DA0BE8295331CD0077C4FE /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		A0DA0BEB295336180077C4FE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,7 @@
 		427D70E6295249BE00751781 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A0DA0BEA295336080077C4FE /* Extensions */,
 				427D70EB29524A6600751781 /* View */,
 				427D70EA29524A4E00751781 /* ViewModel */,
 				427D70E929524A4800751781 /* Cell */,
@@ -129,6 +142,8 @@
 		427D70E929524A4800751781 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				A0DA0BE329532DBB0077C4FE /* ProductItemCell */,
+				A0DA0BDE29532D770077C4FE /* TableView */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -136,6 +151,7 @@
 		427D70EA29524A4E00751781 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A0DA0BE8295331CD0077C4FE /* HomeScreenViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -143,9 +159,35 @@
 		427D70EB29524A6600751781 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				427D70CC29523A1E00751781 /* ViewController.swift */,
+				427D70CC29523A1E00751781 /* HomeScreen.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A0DA0BDE29532D770077C4FE /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A0DA0BDF29532DA20077C4FE /* PathaoShopList.swift */,
+				A0DA0BE029532DA20077C4FE /* PathaoShopList.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		A0DA0BE329532DBB0077C4FE /* ProductItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				A0DA0BE429532DE20077C4FE /* ProductItemCell.swift */,
+				A0DA0BE529532DE20077C4FE /* ProductItemCell.xib */,
+			);
+			path = ProductItemCell;
+			sourceTree = "<group>";
+		};
+		A0DA0BEA295336080077C4FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0DA0BEB295336180077C4FE /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +248,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DA0BE729532DE20077C4FE /* ProductItemCell.xib in Resources */,
+				A0DA0BE229532DA20077C4FE /* PathaoShopList.xib in Resources */,
 				427D70E029523C6400751781 /* pathao-shop.json in Resources */,
 				427D70D829523A2000751781 /* LaunchScreen.storyboard in Resources */,
 				427D70D529523A2000751781 /* Assets.xcassets in Resources */,
@@ -220,10 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DA0BE629532DE20077C4FE /* ProductItemCell.swift in Sources */,
+				A0DA0BEC295336180077C4FE /* Extensions.swift in Sources */,
+				A0DA0BE9295331CD0077C4FE /* HomeScreenViewModel.swift in Sources */,
 				427D70E2295243A200751781 /* Model.swift in Sources */,
-				427D70CD29523A1E00751781 /* ViewController.swift in Sources */,
+				427D70CD29523A1E00751781 /* HomeScreen.swift in Sources */,
 				427D70C929523A1E00751781 /* AppDelegate.swift in Sources */,
 				427D70D329523A1E00751781 /* Pathao_Shop.xcdatamodeld in Sources */,
+				A0DA0BE129532DA20077C4FE /* PathaoShopList.swift in Sources */,
 				427D70CB29523A1E00751781 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +419,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3QKRM5UBYB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Pathao Shop/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -398,6 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3QKRM5UBYB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Pathao Shop/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
