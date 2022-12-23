@@ -23,6 +23,8 @@ class HomeScreen: UIViewController {
         tableView.delegate = self
         tableView.register(PathaoShopList.nib, forCellReuseIdentifier: PathaoShopList.identifier)
         tableView.dataSource = self
+        tableView.separatorColor = UIColor.clear
+//        tableView.sid
     }
 }
 

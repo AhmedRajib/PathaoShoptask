@@ -22,9 +22,12 @@
 		A0DA0BE729532DE20077C4FE /* ProductItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DA0BE529532DE20077C4FE /* ProductItemCell.xib */; };
 		A0DA0BE9295331CD0077C4FE /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA0BE8295331CD0077C4FE /* HomeScreenViewModel.swift */; };
 		A0DA0BEC295336180077C4FE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA0BEB295336180077C4FE /* Extensions.swift */; };
+		BC0DC313DF44AEB37C150223 /* Pods_Pathao_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021C76315E15C6A9E88349FB /* Pods_Pathao_Shop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021C76315E15C6A9E88349FB /* Pods_Pathao_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pathao_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36FA558397775418811E8720 /* Pods-Pathao Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pathao Shop.debug.xcconfig"; path = "Target Support Files/Pods-Pathao Shop/Pods-Pathao Shop.debug.xcconfig"; sourceTree = "<group>"; };
 		427D70C529523A1E00751781 /* Pathao Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pathao Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		427D70C829523A1E00751781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		427D70CA29523A1E00751781 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		A0DA0BE529532DE20077C4FE /* ProductItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemCell.xib; sourceTree = "<group>"; };
 		A0DA0BE8295331CD0077C4FE /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		A0DA0BEB295336180077C4FE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B45E842736E8BAFEE30CE43B /* Pods-Pathao Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pathao Shop.release.xcconfig"; path = "Target Support Files/Pods-Pathao Shop/Pods-Pathao Shop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC0DC313DF44AEB37C150223 /* Pods_Pathao_Shop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,8 @@
 			children = (
 				427D70C729523A1E00751781 /* Pathao Shop */,
 				427D70C629523A1E00751781 /* Products */,
+				FE07271881264B4A807EED7B /* Pods */,
+				56C200FF4B8706F7C2597875 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +171,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		56C200FF4B8706F7C2597875 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				021C76315E15C6A9E88349FB /* Pods_Pathao_Shop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A0DA0BDE29532D770077C4FE /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +205,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FE07271881264B4A807EED7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36FA558397775418811E8720 /* Pods-Pathao Shop.debug.xcconfig */,
+				B45E842736E8BAFEE30CE43B /* Pods-Pathao Shop.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 427D70DC29523A2000751781 /* Build configuration list for PBXNativeTarget "Pathao Shop" */;
 			buildPhases = (
+				A25239FCFE31CC01A344B2B5 /* [CP] Check Pods Manifest.lock */,
 				427D70C129523A1E00751781 /* Sources */,
 				427D70C229523A1E00751781 /* Frameworks */,
 				427D70C329523A1E00751781 /* Resources */,
+				016CECF196AF2F3851CC6D7C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,6 +285,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		016CECF196AF2F3851CC6D7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pathao Shop/Pods-Pathao Shop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pathao Shop/Pods-Pathao Shop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pathao Shop/Pods-Pathao Shop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A25239FCFE31CC01A344B2B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pathao Shop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		427D70C129523A1E00751781 /* Sources */ = {
@@ -414,6 +483,7 @@
 		};
 		427D70DD29523A2000751781 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36FA558397775418811E8720 /* Pods-Pathao Shop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,6 +512,7 @@
 		};
 		427D70DE29523A2000751781 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B45E842736E8BAFEE30CE43B /* Pods-Pathao Shop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

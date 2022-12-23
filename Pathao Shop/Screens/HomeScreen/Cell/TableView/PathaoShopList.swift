@@ -13,6 +13,7 @@ class PathaoShopList: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     class var identifier: String { return String(describing: self) }
     class var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
+    let spacing:CGFloat = 10
     
      // MARK: - Variables Lists
     var shopItems = [Item]() {
@@ -35,21 +36,22 @@ class PathaoShopList: UITableViewCell {
     private func _initView() {
         collectionView.register(ProductItemCell.nib, forCellWithReuseIdentifier: ProductItemCell.identifier)
 
-//        collectionView.scrold
+        collectionView?.showsHorizontalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self
         
+//        let layout = UICollectionViewFlowLayout()
+//        layout.scrollDirection = .horizontal
+//        self.collectionView.collectionViewLayout = layout
+//        self.collectionView!.contentInset = UIEdgeInsets(top: -10, left: 0, bottom:0, right: 0)
+        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        self.collectionView.collectionViewLayout = layout
-        self.collectionView!.contentInset = UIEdgeInsets(top: -10, left: 0, bottom:0, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+        layout.minimumLineSpacing = spacing
+        layout.minimumInteritemSpacing = spacing
         
-//        if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-//            layout.minimumInteritemSpacing = 0
-//            layout.minimumLineSpacing = 0
-//            layout.itemSize = CGSize(width: self.collectionView.frame.size.width-40, height: self.collectionView.frame.size.height-10)
-//            layout.invalidateLayout()
-//        }
+        self.collectionView.collectionViewLayout = layout
     }
     
 }
@@ -57,22 +59,31 @@ class PathaoShopList: UITableViewCell {
 //  MARK: - Setup DataSource Methods
 extension PathaoShopList: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        shopItems.count
+        shopItems.count > 5 ? 5 : shopItems.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductItemCell.identifier, for: indexPath) as! ProductItemCell
-        cell.nameLabel.text = shopItems[indexPath.row].name
-//        debugPrint("shopingItem ",shopItems[indexPath.row].name)
+//        cell.nameLabel.text = shopItems[indexPath.row].name
+        cell.item = shopItems[indexPath.row]
         return cell
     }
 }
 
  // MARK: - Setup Delegate Methods
 extension PathaoShopList: UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 250 , height: 250)
-    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numberOfItemsperRow = 1
+        let spacingbetweencells = 16
+        
+        
+        let totalSpacing = (2 * Int(self.spacing)) + ((numberOfItemsperRow - 1) * spacingbetweencells)
+        if let collection = self.collectionView{
+            let width = (Int(collection.bounds.width) - totalSpacing)/numberOfItemsperRow
+            return CGSize(width: width - 20, height: 350)
+        }else{
+            return CGSize(width: 0, height: 0)
+        }
+    }
 }
