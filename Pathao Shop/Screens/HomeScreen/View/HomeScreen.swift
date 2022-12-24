@@ -24,7 +24,7 @@ class HomeScreen: UIViewController {
         tableView.register(PathaoShopList.nib, forCellReuseIdentifier: PathaoShopList.identifier)
         tableView.dataSource = self
         tableView.separatorColor = UIColor.clear
-//        tableView.sid
+        NotificationCenter.default.addObserver(self, selector: #selector(addCound(notification:)), name: .addCount, object: nil)
     }
 }
 

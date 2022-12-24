@@ -40,11 +40,6 @@ class PathaoShopList: UITableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-//        let layout = UICollectionViewFlowLayout()
-//        layout.scrollDirection = .horizontal
-//        self.collectionView.collectionViewLayout = layout
-//        self.collectionView!.contentInset = UIEdgeInsets(top: -10, left: 0, bottom:0, right: 0)
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
@@ -52,7 +47,11 @@ class PathaoShopList: UITableViewCell {
         layout.minimumInteritemSpacing = spacing
         
         self.collectionView.collectionViewLayout = layout
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadCollectionView(notification:)), name: .reloadCollectionView, object: nil)
     }
+    @objc func reloadCollectionView(notification: Notification) {
+        collectionView.reloadData()
+     }
     
 }
 
@@ -64,7 +63,6 @@ extension PathaoShopList: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductItemCell.identifier, for: indexPath) as! ProductItemCell
-//        cell.nameLabel.text = shopItems[indexPath.row].name
         cell.item = shopItems[indexPath.row]
         return cell
     }

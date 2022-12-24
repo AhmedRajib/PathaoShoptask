@@ -11,17 +11,13 @@ import Foundation
 class HomeScreenViewModel {
     var productLists : [ShopMoodel] = []
     var title: [String] = []
+    var storeItem: [Item] = []
     
     init() {
         let jsonFile = loadJson(filename: "pathao-shop")
          if let json = jsonFile {
              productLists = json
-//             let hel = json.filter { title in
-//                 title.shopName is String
-//             }
-//             debugPrint("Pathao ", he)
          }
-
     }
     func loadJson(filename fileName: String) -> [ShopMoodel]? {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {

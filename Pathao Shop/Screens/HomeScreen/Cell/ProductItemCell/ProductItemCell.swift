@@ -8,6 +8,11 @@
 import UIKit
 import SDWebImage
 
+protocol setCount {
+    func addItem(item: Item)
+    func removeItem(item: Item)
+}
+
 class ProductItemCell: UICollectionViewCell {
 
      // MARK: - OUTLETS CONNECTIONS
@@ -26,6 +31,7 @@ class ProductItemCell: UICollectionViewCell {
             initView()
         }
     }
+    var delegate: setCount?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -58,13 +64,27 @@ class ProductItemCell: UICollectionViewCell {
                 self.image.sd_setImage(with: URL(string: imageUrl), placeholderImage: nil, options: .continueInBackground)
 
             }
+            if let count = item?.count {
+                countLabel.text = "\(count)"
+            }
         }
+        
     }
     @IBAction func AddBtnTapped(_ sender: UIButton) {
-        debugPrint("Tapped on addBtn")
+        if var addItem = item {
+            addItem.count! += 1
+            item = addItem
+            debugPrint("UpdateInfo ",item)
+            
+            NotificationCenter.default.post(name: .addCount, object: addItem)
+        }
     }
     
     @IBAction func removeBtnTapped(_ sender: UIButton) {
-        debugPrint("Tapped on addBtn")
+            if let addItem = item {
+                
+                delegate?.removeItem(item: addItem)
+            }
+        
     }
 }

@@ -9,8 +9,8 @@ import Foundation
 
 // MARK: - ShopMoodel
 struct ShopMoodel: Codable {
-    let shopName: String?
-    let items: [Item]?
+    var shopName: String?
+    var items: [Item]?
 
     enum CodingKeys: String, CodingKey {
         case shopName = "shop_name"
@@ -19,14 +19,22 @@ struct ShopMoodel: Codable {
 }
 
 // MARK: - Item
-struct Item: Codable {
-    let name, itemDescription: String?
-    let price: Int?
-    let image: String?
+struct Item: Codable,Equatable {
+    var name, itemDescription: String?
+    var price: Int?
+    var image: String?
+    var count: Int?
+    
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        if lhs.name == rhs.name && lhs.itemDescription == rhs.itemDescription && lhs.price == rhs.price {
+            return true
+        }
+        return false
+    }
 
     enum CodingKeys: String, CodingKey {
         case name
         case itemDescription = "description"
-        case price, image
+        case price, image, count
     }
 }
