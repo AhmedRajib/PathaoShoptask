@@ -54,19 +54,17 @@ extension HomeScreen {
     func searchElephantIndex(searchItem: Item)  {
         var inde = 0
         for shopItemList in ViewModel?.productLists ?? [] {
-            if var shopItem = shopItemList.items {
+            if let shopItem = shopItemList.items {
                 for (index,value) in shopItem.enumerated() {
                     if value == searchItem {
-                        ViewModel?.productLists[inde].items?[index].count! += 1
-//                                    shopItemList.items?[index].count! += 1
-                        print("ShopItem ",shopItem, " inde",inde)
+                        if (ViewModel?.productLists[inde].items?[index].count!)! < 5{
+                            ViewModel?.productLists[inde].items?[index].count! += 1
+                        }
                     }
                 }
             }
             inde += 1
-        }
-        print("Finally ",ViewModel?.productLists )
-       
+        }       
         tableView.reloadData()
         NotificationCenter.default.post(name: .reloadCollectionView, object: nil)
     }
@@ -74,22 +72,17 @@ extension HomeScreen {
     func removeItem(searchItem: Item)  {
         var inde = 0
         for shopItemList in ViewModel?.productLists ?? [] {
-            if var shopItem = shopItemList.items {
+            if let shopItem = shopItemList.items {
                 for (index,value) in shopItem.enumerated() {
                     if value == searchItem {
                         if (ViewModel?.productLists[inde].items?[index].count!)! > 0{
                             ViewModel?.productLists[inde].items?[index].count! -= 1
-    //                                    shopItemList.items?[index].count! += 1
-                            print("ShopItem ",shopItem, " inde",inde)
                         }
-                        
                     }
                 }
             }
             inde += 1
         }
-        print("Finally ",ViewModel?.productLists )
-       
         tableView.reloadData()
         NotificationCenter.default.post(name: .reloadCollectionView, object: nil)
     }

@@ -71,13 +71,13 @@ class ProductItemCell: UICollectionViewCell {
         
     }
     @IBAction func AddBtnTapped(_ sender: UIButton) {
-        if var addItem = item {
+        if let addItem = item {
             NotificationCenter.default.post(name: .addCount, object: addItem)
         }
     }
     
     @IBAction func removeBtnTapped(_ sender: UIButton) {
-        if var addItem = item {
+        if let addItem = item {
             NotificationCenter.default.post(name: .removeCount, object: addItem)
         }
     }
