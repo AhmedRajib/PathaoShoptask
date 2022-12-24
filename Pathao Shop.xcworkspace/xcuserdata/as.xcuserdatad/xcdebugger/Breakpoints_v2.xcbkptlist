@@ -7,17 +7,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "77014A62-7005-441B-81F5-F115CA141AE3"
+            uuid = "EB3F064E-A7B3-4657-92C4-10451E716428"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pathao Shop/Screens/HomeScreen/Extensions/Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "searchElephantIndex(searchItem:)"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "removeItem(searchItem:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EB3F064E-A7B3-4657-92C4-10451E716428 - 7c3b6df671f79a87"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pathao_Shop.HomeScreen.removeItem(searchItem: Pathao_Shop.Item) -&gt; ()"
+                  moduleName = "Pathao Shop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MacBook/Desktop/Pathao%20Shop%206.09.28%20PM/Pathao%20Shop/Screens/HomeScreen/Extensions/Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1482">
+               </Location>
+               <Location
+                  uuid = "EB3F064E-A7B3-4657-92C4-10451E716428 - 7c3b6df671f79a87"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pathao_Shop.HomeScreen.removeItem(searchItem: Pathao_Shop.Item) -&gt; ()"
+                  moduleName = "Pathao Shop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MacBook/Desktop/Pathao%20Shop%206.09.28%20PM/Pathao%20Shop/Screens/HomeScreen/Extensions/Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "4192">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

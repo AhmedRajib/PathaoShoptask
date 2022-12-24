@@ -25,6 +25,7 @@ class HomeScreen: UIViewController {
         tableView.dataSource = self
         tableView.separatorColor = UIColor.clear
         NotificationCenter.default.addObserver(self, selector: #selector(addCound(notification:)), name: .addCount, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(removeCount(notification:)), name: .removeCount, object: nil)
     }
 }
 
