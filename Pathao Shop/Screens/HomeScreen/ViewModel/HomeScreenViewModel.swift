@@ -12,6 +12,7 @@ class HomeScreenViewModel {
     var productLists : [ShopMoodel] = []
     var title: [String] = []
     var storeItem: [Item] = []
+    var totalAddItems = 0
     
     init() {
         let jsonFile = loadJson(filename: "pathao-shop")

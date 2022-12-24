@@ -59,6 +59,8 @@ extension HomeScreen {
                     if value == searchItem {
                         if (ViewModel?.productLists[inde].items?[index].count!)! < 5{
                             ViewModel?.productLists[inde].items?[index].count! += 1
+                            ViewModel?.totalAddItems += 1
+                            setupNavigationBarButtonItem()
                         }
                     }
                 }
@@ -77,6 +79,8 @@ extension HomeScreen {
                     if value == searchItem {
                         if (ViewModel?.productLists[inde].items?[index].count!)! > 0{
                             ViewModel?.productLists[inde].items?[index].count! -= 1
+                            ViewModel?.totalAddItems -= 1
+                            setupNavigationBarButtonItem()
                         }
                     }
                 }
@@ -85,5 +89,9 @@ extension HomeScreen {
         }
         tableView.reloadData()
         NotificationCenter.default.post(name: .reloadCollectionView, object: nil)
+    }
+    
+    @objc func buttonAction() {
+        
     }
 }
