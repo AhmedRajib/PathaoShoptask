@@ -33,8 +33,10 @@ extension HomeScreen: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(360)
     }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return ViewModel?.productLists[section].shopName
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = CustomHeaderView()
+        headerView.titleLabel.text = ViewModel?.productLists[section].shopName
+        return headerView
     }
 }
 

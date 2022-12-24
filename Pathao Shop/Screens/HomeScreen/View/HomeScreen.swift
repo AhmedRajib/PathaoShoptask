@@ -36,10 +36,8 @@ class HomeScreen: UIViewController {
         button.frame = CGRect(x: 0, y: 0, width: 45, height: 35)
         button.layer.cornerRadius = 8
         let label = UILabel(frame: CGRect(x: 3, y: 5, width: 20, height: 20))
-//        label.font = UIFont(name: "Arial-BoldMT", size: 16)
         if let vm = ViewModel {
             button.setTitle("\(vm.totalAddItems)", for: .normal)
-
         }
         let barButton = UIBarButtonItem(customView: button)
         self.navigationItem.rightBarButtonItem = barButton
