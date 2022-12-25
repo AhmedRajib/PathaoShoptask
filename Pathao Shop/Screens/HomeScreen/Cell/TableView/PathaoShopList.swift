@@ -49,8 +49,12 @@ class PathaoShopList: UITableViewCell {
         self.collectionView.collectionViewLayout = layout
         NotificationCenter.default.addObserver(self, selector: #selector(reloadCollectionView(notification:)), name: .reloadCollectionView, object: nil)
     }
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .reloadCollectionView, object: nil)
+    }
     @objc func reloadCollectionView(notification: Notification) {
         collectionView.reloadData()
+        print(" twoo Reload COllectionview")
      }
     
 }

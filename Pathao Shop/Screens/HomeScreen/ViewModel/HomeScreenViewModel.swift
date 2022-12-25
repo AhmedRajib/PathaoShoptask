@@ -6,18 +6,17 @@
 //
 
 import Foundation
-//import UIKit
 
-class HomeScreenViewModel {
-    var productLists : [ShopMoodel] = []
+struct HomeScreenViewModel {
+    static var productLists : [ShopMoodel] = []
+    static var totalAddItems = 0
     var title: [String] = []
     var storeItem: [Item] = []
-    var totalAddItems = 0
-    
+    static var shared = HomeScreenViewModel()
     init() {
         let jsonFile = loadJson(filename: "pathao-shop")
          if let json = jsonFile {
-             productLists = json
+             HomeScreenViewModel.productLists = json
          }
     }
     func loadJson(filename fileName: String) -> [ShopMoodel]? {

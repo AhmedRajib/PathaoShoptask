@@ -35,10 +35,8 @@ class ProductItemCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
-//        initView()
     }
+    
     class var identifier: String { return String(describing: self) }
     class var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
     
@@ -62,23 +60,36 @@ class ProductItemCell: UICollectionViewCell {
             image.contentMode = .scaleAspectFill
             if let imageUrl = shopItem.image {
                 self.image.sd_setImage(with: URL(string: imageUrl), placeholderImage: nil, options: .continueInBackground)
-
             }
             if let count = item?.count {
                 countLabel.text = "\(count)"
             }
         }
-        
     }
     @IBAction func AddBtnTapped(_ sender: UIButton) {
         if let addItem = item {
-            NotificationCenter.default.post(name: .addCount, object: addItem)
+            debugPrint("CurrentSta ",Constant.showScreenFrom)
+            switch Constant.showScreenFrom {
+            case .homeScreen:
+                NotificationCenter.default.post(name: .addCountFromHomeScreen, object: addItem)
+            case .categoryScreen:
+                NotificationCenter.default.post(name: .addCountFromCategoryScreen, object: addItem)
+            case .storeScreen:
+                debugPrint("Hello")
+            }
         }
     }
     
     @IBAction func removeBtnTapped(_ sender: UIButton) {
         if let addItem = item {
-            NotificationCenter.default.post(name: .removeCount, object: addItem)
+            switch Constant.showScreenFrom {
+            case .homeScreen:
+                NotificationCenter.default.post(name: .removeCountFromHomeScreen, object: addItem)
+            case .categoryScreen:
+                NotificationCenter.default.post(name: .removeCountFromCategoryScreen, object: addItem)
+            case .storeScreen:
+                debugPrint("removed")
+            }
         }
     }
 }

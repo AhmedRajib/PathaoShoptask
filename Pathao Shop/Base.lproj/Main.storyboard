@@ -2,9 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kjc-Su-rUn">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,6 +41,90 @@
             </objects>
             <point key="canvasLocation" x="936.92307692307691" y="3.5545023696682461"/>
         </scene>
+        <!--Category List Screen-->
+        <scene sceneID="GOq-Xl-Si5">
+            <objects>
+                <viewController storyboardIdentifier="CategoryListScreen" id="gyh-TX-Ts5" customClass="CategoryListScreen" customModule="Pathao_Shop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k9b-3f-Ihp">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Khb-Fi-Sny">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVf-y7-GkD">
+                                        <rect key="frame" x="15.999999999999996" y="47" width="39.666666666666657" height="35"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="backBtnTapped:" destination="gyh-TX-Ts5" eventType="touchUpInside" id="Cnm-Gq-0pV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ank-8h-8OY">
+                                        <rect key="frame" x="329" y="49.666666666666657" width="45" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="cZU-Le-NTK"/>
+                                            <constraint firstAttribute="height" constant="30" id="kXU-pY-h4h"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jVf-y7-GkD" secondAttribute="bottom" constant="8" id="BeJ-Vz-Pfh"/>
+                                    <constraint firstItem="ank-8h-8OY" firstAttribute="centerY" secondItem="jVf-y7-GkD" secondAttribute="centerY" id="QaD-ke-Vf0"/>
+                                    <constraint firstItem="jVf-y7-GkD" firstAttribute="leading" secondItem="Khb-Fi-Sny" secondAttribute="leading" constant="16" id="lXG-bU-d96"/>
+                                    <constraint firstAttribute="height" constant="90" id="nJo-0i-Rnf"/>
+                                    <constraint firstAttribute="trailing" secondItem="ank-8h-8OY" secondAttribute="trailing" constant="16" id="vSK-rD-JUJ"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vpg-xe-Sq1">
+                                <rect key="frame" x="0.0" y="90" width="390" height="720"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="T3k-cy-KgS">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="15Y-oi-k8c">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3SU-Ij-PBE">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VI8-Yi-z7A"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Khb-Fi-Sny" firstAttribute="trailing" secondItem="VI8-Yi-z7A" secondAttribute="trailing" id="2gR-gf-q5L"/>
+                            <constraint firstItem="Khb-Fi-Sny" firstAttribute="leading" secondItem="VI8-Yi-z7A" secondAttribute="leading" id="7dT-qp-t1f"/>
+                            <constraint firstItem="VI8-Yi-z7A" firstAttribute="bottom" secondItem="Vpg-xe-Sq1" secondAttribute="bottom" id="9Ig-X4-FKv"/>
+                            <constraint firstItem="Vpg-xe-Sq1" firstAttribute="leading" secondItem="VI8-Yi-z7A" secondAttribute="leading" id="AEP-7X-Aia"/>
+                            <constraint firstItem="Vpg-xe-Sq1" firstAttribute="top" secondItem="Khb-Fi-Sny" secondAttribute="bottom" id="MIu-k0-FZo"/>
+                            <constraint firstItem="Khb-Fi-Sny" firstAttribute="top" secondItem="k9b-3f-Ihp" secondAttribute="top" id="Pd8-VT-MdO"/>
+                            <constraint firstItem="VI8-Yi-z7A" firstAttribute="trailing" secondItem="Vpg-xe-Sq1" secondAttribute="trailing" id="zk8-WT-A0E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="awP-mM-Ojf"/>
+                    <connections>
+                        <outlet property="collectionview" destination="Vpg-xe-Sq1" id="lHs-yV-iiW"/>
+                        <outlet property="totalAddedItem" destination="ank-8h-8OY" id="TJR-mK-7gf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sM-IH-K5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936.92307692307691" y="691.70616113744074"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="XRD-6G-5nW">
             <objects>
@@ -59,8 +145,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

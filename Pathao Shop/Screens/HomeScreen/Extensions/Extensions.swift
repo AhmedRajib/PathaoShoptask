@@ -10,7 +10,7 @@ import UIKit
 extension HomeScreen: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        ViewModel?.productLists.count ?? 0
+        HomeScreenViewModel.productLists.count ?? 0
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -19,12 +19,11 @@ extension HomeScreen: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PathaoShopList.identifier, for: indexPath) as! PathaoShopList
         
-        if let shopList = ViewModel?.productLists[indexPath.section] {
+         let shopList = HomeScreenViewModel.productLists[indexPath.section] // {
             if let item = shopList.items {
                 cell.shopItems = []
                 cell.shopItems.append(contentsOf: item)
             }
-        }
         return cell
     }
 }
@@ -35,7 +34,7 @@ extension HomeScreen: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = CustomHeaderView()
-        headerView.titleLabel.text = ViewModel?.productLists[section].shopName
+        headerView.titleLabel.text = HomeScreenViewModel.productLists[section].shopName
         return headerView
     }
 }
@@ -49,19 +48,21 @@ extension HomeScreen {
     }
     
     @objc func removeCount(notification: Notification) {
-        let selectedItem = (notification.object as? Item)!
-        removeItem(searchItem: selectedItem)
+        if let selectedItem = (notification.object as? Item) {
+            removeItem(searchItem: selectedItem)
+        }
      }
     
-    func searchElephantIndex(searchItem: Item)  {
+    func searchElephantIndex(searchItem: Item) {
         var inde = 0
-        for shopItemList in ViewModel?.productLists ?? [] {
+        for shopItemList in HomeScreenViewModel.productLists {
             if let shopItem = shopItemList.items {
                 for (index,value) in shopItem.enumerated() {
                     if value == searchItem {
-                        if (ViewModel?.productLists[inde].items?[index].count!)! < 5{
-                            ViewModel?.productLists[inde].items?[index].count! += 1
-                            ViewModel?.totalAddItems += 1
+                        if (HomeScreenViewModel.productLists[inde].items?[index].count!)! < 5 {
+                            HomeScreenViewModel.productLists[inde].items?[index].count! += 1
+//                            ViewModel?.totalAddItems += 1
+                            HomeScreenViewModel.totalAddItems += 1
                             setupNavigationBarButtonItem()
                         }
                     }
@@ -75,13 +76,13 @@ extension HomeScreen {
     
     func removeItem(searchItem: Item)  {
         var inde = 0
-        for shopItemList in ViewModel?.productLists ?? [] {
+        for shopItemList in HomeScreenViewModel.productLists {
             if let shopItem = shopItemList.items {
                 for (index,value) in shopItem.enumerated() {
                     if value == searchItem {
-                        if (ViewModel?.productLists[inde].items?[index].count!)! > 0{
-                            ViewModel?.productLists[inde].items?[index].count! -= 1
-                            ViewModel?.totalAddItems -= 1
+                        if(HomeScreenViewModel.productLists[inde].items?[index].count!)! > 0{
+                            HomeScreenViewModel.productLists[inde].items?[index].count! -= 1
+                            HomeScreenViewModel.totalAddItems -= 1
                             setupNavigationBarButtonItem()
                         }
                     }
@@ -91,6 +92,11 @@ extension HomeScreen {
         }
         tableView.reloadData()
         NotificationCenter.default.post(name: .reloadCollectionView, object: nil)
+    }
+    
+    @objc func reloadTableView(notification: Notification) {
+        tableView.reloadData()
+        print(" twoo TableViewReload")
     }
     
     @objc func buttonAction() {

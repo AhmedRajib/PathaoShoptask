@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4203C6AE2958C220008E3497 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203C6AD2958C220008E3497 /* Constant.swift */; };
 		4277192629577049001A9CF9 /* StoreScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277192529577049001A9CF9 /* StoreScreenViewModel.swift */; };
 		427D70C929523A1E00751781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D70C829523A1E00751781 /* AppDelegate.swift */; };
 		427D70CB29523A1E00751781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D70CA29523A1E00751781 /* SceneDelegate.swift */; };
 		427D70CD29523A1E00751781 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D70CC29523A1E00751781 /* HomeScreen.swift */; };
 		427D70D029523A1E00751781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427D70CE29523A1E00751781 /* Main.storyboard */; };
-		427D70D329523A1E00751781 /* Pathao_Shop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 427D70D129523A1E00751781 /* Pathao_Shop.xcdatamodeld */; };
 		427D70D529523A2000751781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427D70D429523A2000751781 /* Assets.xcassets */; };
 		427D70D829523A2000751781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427D70D629523A2000751781 /* LaunchScreen.storyboard */; };
 		427D70E029523C6400751781 /* pathao-shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 427D70DF29523C6400751781 /* pathao-shop.json */; };
@@ -20,6 +20,8 @@
 		42ADAB2B29572B85001F125C /* Extension + NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADAB2A29572B85001F125C /* Extension + NotificationCenter.swift */; };
 		42DB5E6529579D6700788CF4 /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DB5E6429579D6700788CF4 /* CustomHeaderView.xib */; };
 		42DB5E6729579D8A00788CF4 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DB5E6629579D8A00788CF4 /* CustomHeaderView.swift */; };
+		42DB5E6A2957A46800788CF4 /* CategoryListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DB5E692957A46800788CF4 /* CategoryListScreen.swift */; };
+		42DB5E6D2957A7CD00788CF4 /* Extensions + CategoryItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DB5E6C2957A7CD00788CF4 /* Extensions + CategoryItemList.swift */; };
 		A0DA0BE129532DA20077C4FE /* PathaoShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA0BDF29532DA20077C4FE /* PathaoShopList.swift */; };
 		A0DA0BE229532DA20077C4FE /* PathaoShopList.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DA0BE029532DA20077C4FE /* PathaoShopList.xib */; };
 		A0DA0BE629532DE20077C4FE /* ProductItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA0BE429532DE20077C4FE /* ProductItemCell.swift */; };
@@ -32,13 +34,13 @@
 /* Begin PBXFileReference section */
 		021C76315E15C6A9E88349FB /* Pods_Pathao_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pathao_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FA558397775418811E8720 /* Pods-Pathao Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pathao Shop.debug.xcconfig"; path = "Target Support Files/Pods-Pathao Shop/Pods-Pathao Shop.debug.xcconfig"; sourceTree = "<group>"; };
+		4203C6AD2958C220008E3497 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		4277192529577049001A9CF9 /* StoreScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreScreenViewModel.swift; sourceTree = "<group>"; };
 		427D70C529523A1E00751781 /* Pathao Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pathao Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		427D70C829523A1E00751781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		427D70CA29523A1E00751781 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		427D70CC29523A1E00751781 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		427D70CF29523A1E00751781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		427D70D229523A1E00751781 /* Pathao_Shop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pathao_Shop.xcdatamodel; sourceTree = "<group>"; };
 		427D70D429523A2000751781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		427D70D729523A2000751781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		427D70D929523A2000751781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		42ADAB2A29572B85001F125C /* Extension + NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + NotificationCenter.swift"; sourceTree = "<group>"; };
 		42DB5E6429579D6700788CF4 /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
 		42DB5E6629579D8A00788CF4 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		42DB5E692957A46800788CF4 /* CategoryListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListScreen.swift; sourceTree = "<group>"; };
+		42DB5E6C2957A7CD00788CF4 /* Extensions + CategoryItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + CategoryItemList.swift"; sourceTree = "<group>"; };
 		A0DA0BDF29532DA20077C4FE /* PathaoShopList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathaoShopList.swift; sourceTree = "<group>"; };
 		A0DA0BE029532DA20077C4FE /* PathaoShopList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathaoShopList.xib; sourceTree = "<group>"; };
 		A0DA0BE429532DE20077C4FE /* ProductItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemCell.swift; sourceTree = "<group>"; };
@@ -128,7 +132,6 @@
 				427D70D429523A2000751781 /* Assets.xcassets */,
 				427D70D629523A2000751781 /* LaunchScreen.storyboard */,
 				427D70D929523A2000751781 /* Info.plist */,
-				427D70D129523A1E00751781 /* Pathao_Shop.xcdatamodeld */,
 				427D70E1295243A200751781 /* Model.swift */,
 			);
 			path = "Pathao Shop";
@@ -173,6 +176,8 @@
 		427D70E7295249F400751781 /* CategoryItemList */ = {
 			isa = PBXGroup;
 			children = (
+				42DB5E6B2957A7BB00788CF4 /* Extensions */,
+				42DB5E682957A44300788CF4 /* View */,
 			);
 			path = CategoryItemList;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				42ADAB2A29572B85001F125C /* Extension + NotificationCenter.swift */,
+				4203C6AD2958C220008E3497 /* Constant.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -225,10 +231,26 @@
 		42DB5E6129579C4500788CF4 /* SectionHeaderView */ = {
 			isa = PBXGroup;
 			children = (
-				42DB5E6429579D6700788CF4 /* CustomHeaderView.xib */,
 				42DB5E6629579D8A00788CF4 /* CustomHeaderView.swift */,
+				42DB5E6429579D6700788CF4 /* CustomHeaderView.xib */,
 			);
 			path = SectionHeaderView;
+			sourceTree = "<group>";
+		};
+		42DB5E682957A44300788CF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42DB5E692957A46800788CF4 /* CategoryListScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42DB5E6B2957A7BB00788CF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				42DB5E6C2957A7CD00788CF4 /* Extensions + CategoryItemList.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		56C200FF4B8706F7C2597875 /* Frameworks */ = {
@@ -393,18 +415,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DB5E6A2957A46800788CF4 /* CategoryListScreen.swift in Sources */,
 				A0DA0BE629532DE20077C4FE /* ProductItemCell.swift in Sources */,
 				A0DA0BEC295336180077C4FE /* Extensions.swift in Sources */,
 				A0DA0BE9295331CD0077C4FE /* HomeScreenViewModel.swift in Sources */,
 				427D70E2295243A200751781 /* Model.swift in Sources */,
 				42DB5E6729579D8A00788CF4 /* CustomHeaderView.swift in Sources */,
 				427D70CD29523A1E00751781 /* HomeScreen.swift in Sources */,
+				4203C6AE2958C220008E3497 /* Constant.swift in Sources */,
 				42ADAB2B29572B85001F125C /* Extension + NotificationCenter.swift in Sources */,
 				427D70C929523A1E00751781 /* AppDelegate.swift in Sources */,
-				427D70D329523A1E00751781 /* Pathao_Shop.xcdatamodeld in Sources */,
 				A0DA0BE129532DA20077C4FE /* PathaoShopList.swift in Sources */,
 				427D70CB29523A1E00751781 /* SceneDelegate.swift in Sources */,
 				4277192629577049001A9CF9 /* StoreScreenViewModel.swift in Sources */,
+				42DB5E6D2957A7CD00788CF4 /* Extensions + CategoryItemList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +584,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,6 +614,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,19 +650,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		427D70D129523A1E00751781 /* Pathao_Shop.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				427D70D229523A1E00751781 /* Pathao_Shop.xcdatamodel */,
-			);
-			currentVersion = 427D70D229523A1E00751781 /* Pathao_Shop.xcdatamodel */;
-			path = Pathao_Shop.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 427D70BD29523A1E00751781 /* Project object */;
 }
