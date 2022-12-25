@@ -30,7 +30,7 @@ extension HomeScreen: UITableViewDataSource {
 
 extension HomeScreen: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(360)
+        return 210
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = CustomHeaderView()

@@ -40,13 +40,14 @@ class PathaoShopList: UITableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
-        layout.minimumLineSpacing = spacing
-        layout.minimumInteritemSpacing = spacing
-        
-        self.collectionView.collectionViewLayout = layout
+//        let layout = UICollectionViewFlowLayout()
+//        layout.scrollDirection = .horizontal
+//        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+//        layout.minimumLineSpacing = spacing
+//        layout.minimumInteritemSpacing = spacing
+//
+//        self.collectionView.collectionViewLayout = layout
+        self.collectionView.collectionViewLayout = collectionViewLayout()
         NotificationCenter.default.addObserver(self, selector: #selector(reloadCollectionView(notification:)), name: .reloadCollectionView, object: nil)
     }
     deinit {
@@ -56,6 +57,34 @@ class PathaoShopList: UITableViewCell {
         collectionView.reloadData()
         print(" twoo Reload COllectionview")
      }
+    
+    private func collectionViewLayout() -> UICollectionViewLayout {
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionHeadersPinToVisibleBounds = true
+        // Important: if direction is horizontal use minimumItemSpacing instead.
+        layout.scrollDirection = .vertical
+        
+        let itemHeight: CGFloat = 240
+        let minCellWidth :CGFloat = 130.0
+        let minItemSpacing: CGFloat = 10
+        let containerWidth: CGFloat = collectionView.bounds.width
+        let maxCellCountPerRow: CGFloat =  floor((containerWidth - minItemSpacing) / (minCellWidth+minItemSpacing ))
+        
+        let itemWidth: CGFloat = floor( ((containerWidth - (2 * minItemSpacing) - (maxCellCountPerRow-1) * minItemSpacing) / maxCellCountPerRow  ) )
+        // Calculate the remaining space after substracting calculating cellWidth (Divide by 2 because of left and right insets)
+        let inset = max(minItemSpacing, floor( (containerWidth - (maxCellCountPerRow*itemWidth) - (maxCellCountPerRow-1)*minItemSpacing) / 2 ) )
+
+        
+        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
+        layout.minimumInteritemSpacing = min(minItemSpacing,inset)
+        layout.minimumLineSpacing = minItemSpacing
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: minItemSpacing, left: inset, bottom: minItemSpacing, right: inset)
+
+        
+        return layout
+    }
     
 }
 
@@ -76,16 +105,16 @@ extension PathaoShopList: UICollectionViewDataSource {
 extension PathaoShopList: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let numberOfItemsperRow = 1
-        let spacingbetweencells = 16
-        
-        
+        let numberOfItemsperRow = 2
+        let spacingbetweencells = 8
+    
         let totalSpacing = (2 * Int(self.spacing)) + ((numberOfItemsperRow - 1) * spacingbetweencells)
         if let collection = self.collectionView{
             let width = (Int(collection.bounds.width) - totalSpacing)/numberOfItemsperRow
-            return CGSize(width: width - 20, height: 350)
+            return CGSize(width: width , height: width)
         }else{
             return CGSize(width: 0, height: 0)
         }
     }
+
 }
