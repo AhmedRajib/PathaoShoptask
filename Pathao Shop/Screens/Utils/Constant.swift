@@ -12,6 +12,12 @@ enum FromScreen {
     case categoryScreen
     case storeScreen
 }
+
+enum AddOrRemove {
+    case add
+    case remove
+}
+
 struct Constant {
     static var showScreenFrom: FromScreen = .homeScreen
     static var totalItemPrice = 0

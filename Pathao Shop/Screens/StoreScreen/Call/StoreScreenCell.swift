@@ -53,44 +53,50 @@ class StoreScreenCell: UITableViewCell {
                 
                 NotificationCenter.default.post(name: .totalPrice, object: nil)
             }
-            
         }
+        addBtn.layer.borderWidth = 1
+        addBtn.layer.borderColor = UIColor.black.cgColor
+        addBtn.setTitle("Add", for: .normal)
+        
+        removeBtn.layer.borderWidth = 1
+        removeBtn.layer.borderColor = UIColor.black.cgColor
+        removeBtn.setTitle("Remove", for: .normal)
         
         
     }
 
     @IBAction func tappedOnRemoved(_ sender: UIButton) {
-        print("removedItem ", sender.tag)
-        debugPrint("Selectiiiii ",item)
-//        NotificationCenter.default.post(name: .totalPrice, object: nil)
-        NotificationCenter.default.post(name: .removeItemFromStoreScreen, object: item)
+        if let item {
+            addItem(searchItem: item, operationType: .remove)
+            NotificationCenter.default.post(name: .removeItemFromStoreScreen, object: item)
+        }
     }
     
     
     
     @IBAction func tappedOnAdd(_ sender: UIButton) {
-        print("removedItem ", sender.tag)
-//        NotificationCenter.default.post(name: .totalPrice, object: nil)
         if let item {
-            addItem(searchItem: item)
+            addItem(searchItem: item, operationType: .add)
             NotificationCenter.default.post(name: .addItemFromStoreScreen, object: item)
         }
     }
     
-    func addItem(searchItem: Item) {
+    func addItem(searchItem: Item, operationType: AddOrRemove) {
         var inde = 0
         for shopItemList in HomeScreenViewModel.productLists {
             if let shopItem = shopItemList.items {
                 for (index,value) in shopItem.enumerated() {
                     if value == searchItem {
-//                        if (HomeScreenViewModel.productLists[inde].items?[index].count!)! < 5 {
-//                            HomeScreenViewModel.productLists[inde].items?[index].count! += 1
-////                            ViewModel?.totalAddItems += 1
-//                            HomeScreenViewModel.totalAddItems += 1
-//                        }
-                        HomeScreenViewModel.productLists[inde].items?[index].count! += 1
-//                            ViewModel?.totalAddItems += 1
-                        HomeScreenViewModel.totalAddItems += 1
+                        if operationType == .add {
+                            HomeScreenViewModel.productLists[inde].items?[index].count! += 1
+                            HomeScreenViewModel.totalAddItems += 1
+                        }else {
+                            if (HomeScreenViewModel.productLists[inde].items?[index].count!)! > 0 {
+                                HomeScreenViewModel.productLists[inde].items?[index].count! -= 1
+                                HomeScreenViewModel.totalAddItems -= 1
+                            }
+                            
+                        }
                     }
                 }
             }

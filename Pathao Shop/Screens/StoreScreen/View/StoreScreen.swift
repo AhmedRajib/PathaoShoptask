@@ -56,54 +56,32 @@ class StoreScreen: UIViewController {
         totalPriceLabel.text = "Total Price: \(Constant.totalItemPrice)"
     }
     
-    func addItemInto(searchItem: Item) {
-        var inde = 0
-        for shopItemList in HomeScreenViewModel.productLists {
-            if let shopItem = shopItemList.items {
-                for (index,item) in shopItem.enumerated() {
-                    if item == searchItem {
-//                        debugPrint("Hooo ",item.name, " ",index)
-                        debugPrint("gii ",selectedItemLists[index].name)
-                        selectedItemLists[index].count! += 1
-                        debugPrint("Totasl Count ",selectedItemLists.count)
+    func updateSelectedItem(searchItem: Item,operationType: AddOrRemove) {
+        for (index,item) in selectedItemLists.enumerated() {
+            if item == searchItem {
+                if operationType == .add {
+                    selectedItemLists[index].count! += 1
+                } else {
+                    if selectedItemLists[index].count ?? 0 > 1 {
+                        selectedItemLists[index].count! -= 1
+                    }else {
+                        selectedItemLists.remove(at: index)
                     }
                 }
+                tableview.reloadData()
             }
-            inde += 1
         }
-        tableview.reloadData()
     }
-    
-    func removeItem(searchItem: Item)  {
-        var inde = 0
-        for shopItemList in HomeScreenViewModel.productLists {
-            if let shopItem = shopItemList.items {
-                for (index,value) in shopItem.enumerated() {
-                    if value == searchItem {
-                        if(HomeScreenViewModel.productLists[inde].items?[index].count!)! > 0{
-                            HomeScreenViewModel.productLists[inde].items?[index].count! -= 1
-                            HomeScreenViewModel.totalAddItems -= 1
-                        }
-                    }
-                }
-            }
-            inde += 1
-        }
-        tableview.reloadData()
-    }
-
 
     @objc func addItemFromStorage(notification: Notification) {
         if let selectedItem = (notification.object as? Item) {
-            addItemInto(searchItem: selectedItem)
-//            getSelectedInfo()
+            updateSelectedItem(searchItem: selectedItem, operationType: .add)
         }
     }
     
     @objc func removeItemFromStorage(notification: Notification) {
         if let selectedItem = (notification.object as? Item) {
-            removeItem(searchItem: selectedItem)
-
+            updateSelectedItem(searchItem: selectedItem, operationType: .remove)
         }
     }
 }

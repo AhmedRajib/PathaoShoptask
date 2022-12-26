@@ -231,9 +231,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHJ-SO-wOb">
-                                        <rect key="frame" x="16" y="55" width="60" height="34.333333333333343"/>
+                                        <rect key="frame" x="8" y="55" width="40" height="34.333333333333343"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="yG6-BN-iOE"/>
+                                            <constraint firstAttribute="width" constant="40" id="yG6-BN-iOE"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -246,7 +246,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0TJ-Wp-VN3"/>
-                                    <constraint firstItem="YHJ-SO-wOb" firstAttribute="leading" secondItem="tWN-uR-Iwq" secondAttribute="leading" constant="16" id="X3h-G7-hwX"/>
+                                    <constraint firstItem="YHJ-SO-wOb" firstAttribute="leading" secondItem="tWN-uR-Iwq" secondAttribute="leading" constant="8" id="X3h-G7-hwX"/>
                                     <constraint firstItem="YHJ-SO-wOb" firstAttribute="top" secondItem="tWN-uR-Iwq" secondAttribute="topMargin" id="jqy-yO-cUC"/>
                                 </constraints>
                             </view>

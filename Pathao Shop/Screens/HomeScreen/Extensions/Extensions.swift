@@ -10,7 +10,7 @@ import UIKit
 extension HomeScreen: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        HomeScreenViewModel.productLists.count ?? 0
+        HomeScreenViewModel.productLists.count 
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -61,7 +61,6 @@ extension HomeScreen {
                     if value == searchItem {
                         if (HomeScreenViewModel.productLists[inde].items?[index].count!)! < 5 {
                             HomeScreenViewModel.productLists[inde].items?[index].count! += 1
-//                            ViewModel?.totalAddItems += 1
                             HomeScreenViewModel.totalAddItems += 1
                             setupNavigationBarButtonItem()
                         }
