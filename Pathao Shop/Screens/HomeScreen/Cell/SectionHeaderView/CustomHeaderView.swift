@@ -16,7 +16,6 @@ class CustomHeaderView: UIView {
     @IBAction func BtnTapped(_ sender: UIButton) {
         
         Constant.showScreenFrom = .categoryScreen
-        debugPrint("CuurentStage ",Constant.showScreenFrom)
         
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
         let vc: CategoryListScreen = storyboard.instantiateViewController(withIdentifier: "CategoryListScreen") as! CategoryListScreen

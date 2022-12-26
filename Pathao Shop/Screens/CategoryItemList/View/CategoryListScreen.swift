@@ -19,7 +19,6 @@ class CategoryListScreen: UIViewController {
         }
     }
     var selectedSectionTitle = ""
-    var ViewModel: HomeScreenViewModel?
     var index = 0
 
     override func viewDidLoad() {
@@ -28,7 +27,6 @@ class CategoryListScreen: UIViewController {
         setupView()
     }
     private func setupView() {
-        ViewModel = HomeScreenViewModel.shared
         collectionview.delegate = self
         collectionview.dataSource = self
         collectionview.register(ProductItemCell.nib, forCellWithReuseIdentifier: ProductItemCell.identifier)
@@ -53,6 +51,13 @@ class CategoryListScreen: UIViewController {
                 items = HomeScreenViewModel.productLists[index].items
             }
         }
+    }
+    @IBAction func totalAddItemBtnTapped(_ sender: UIButton) {
+        Constant.totalItemPrice = 0
+        let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
+        let vc: StoreScreen = storyboard.instantiateViewController(withIdentifier: "StoreScreen") as! StoreScreen
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     private func collectionViewLayout() -> UICollectionViewLayout {
@@ -83,7 +88,6 @@ class CategoryListScreen: UIViewController {
     }
     
     @IBAction func backBtnTapped(_ sender: UIButton) {
-        debugPrint("TotalCounbt ", HomeScreenViewModel.totalAddItems)
         Constant.showScreenFrom = .homeScreen
         dismiss(animated: true)
         {

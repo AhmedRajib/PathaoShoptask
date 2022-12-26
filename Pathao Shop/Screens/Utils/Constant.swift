@@ -21,5 +21,6 @@ enum AddOrRemove {
 struct Constant {
     static var showScreenFrom: FromScreen = .homeScreen
     static var totalItemPrice = 0
-
+    static var setupDone = false
+    static var successfullyAdded = false
 }

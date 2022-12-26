@@ -28,6 +28,7 @@ class StoreScreenCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        debugPrint("Update file ",Constant.totalItemPrice)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -53,6 +54,21 @@ class StoreScreenCell: UITableViewCell {
                 
                 NotificationCenter.default.post(name: .totalPrice, object: nil)
             }
+        
+//        if let count = item?.count {
+//            totalCountLabel.text = "Total Count: \(count)"
+//            if let price = item?.price {
+//                totalPriceLabel.text = "Total price: \(price * count)"
+//                if Constant.setupDone && !Constant.successfullyAdded{
+//                    Constant.totalItemPrice += price
+//                    Constant.successfullyAdded = true
+//
+//                }else {
+//                    Constant.totalItemPrice += price * count
+//                }
+//                NotificationCenter.default.post(name: .totalPrice, object: nil)
+//            }
+//        }
         }
         addBtn.layer.borderWidth = 1
         addBtn.layer.borderColor = UIColor.black.cgColor
@@ -68,6 +84,11 @@ class StoreScreenCell: UITableViewCell {
     @IBAction func tappedOnRemoved(_ sender: UIButton) {
         if let item {
             addItem(searchItem: item, operationType: .remove)
+            if let price = item.price {
+                Constant.totalItemPrice = 0
+//                Constant.setupDone = true
+//                Constant.successfullyAdded = false
+            }
             NotificationCenter.default.post(name: .removeItemFromStoreScreen, object: item)
         }
     }
@@ -77,6 +98,11 @@ class StoreScreenCell: UITableViewCell {
     @IBAction func tappedOnAdd(_ sender: UIButton) {
         if let item {
             addItem(searchItem: item, operationType: .add)
+            if let price = item.price {
+                Constant.totalItemPrice = 0
+                Constant.setupDone = true
+                Constant.successfullyAdded = false
+            }
             NotificationCenter.default.post(name: .addItemFromStoreScreen, object: item)
         }
     }

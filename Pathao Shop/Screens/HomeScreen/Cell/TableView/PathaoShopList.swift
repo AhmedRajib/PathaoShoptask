@@ -55,7 +55,6 @@ class PathaoShopList: UITableViewCell {
     }
     @objc func reloadCollectionView(notification: Notification) {
         collectionView.reloadData()
-        print(" twoo Reload COllectionview")
      }
     
     private func collectionViewLayout() -> UICollectionViewLayout {

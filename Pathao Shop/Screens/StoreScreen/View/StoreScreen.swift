@@ -44,7 +44,6 @@ class StoreScreen: UIViewController {
                 for (index,value) in shopItem.enumerated() {
                     if value.count ?? 0 > 0 {
                         selectedItemLists.append(shopItem[index])
-                        debugPrint("After Update ", selectedItemLists)
                     }
                 }
             }

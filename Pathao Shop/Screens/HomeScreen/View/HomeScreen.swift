@@ -39,12 +39,13 @@ class HomeScreen: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(removeCount(notification:)), name: .removeCountFromHomeScreen, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView(notification:)), name: .reloadCollectionView, object: nil)
         setupNavigationBarButtonItem()
+        self.navigationItem.title = "Home Screen"
     }
     
     func setupNavigationBarButtonItem() {
         let button =  UIButton(type: .custom)
         button.backgroundColor  = UIColor.red
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showStorageScreen), for: .touchUpInside)
         button.frame = CGRect(x: 0, y: 0, width: 45, height: 35)
         button.layer.cornerRadius = 8
         button.setTitle("\(HomeScreenViewModel.totalAddItems)", for: .normal)

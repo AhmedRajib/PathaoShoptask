@@ -95,10 +95,10 @@ extension HomeScreen {
     
     @objc func reloadTableView(notification: Notification) {
         tableView.reloadData()
-        print(" twoo TableViewReload")
     }
     
-    @objc func buttonAction() {
+    @objc func showStorageScreen() {
+        Constant.totalItemPrice = 0
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
         let vc: StoreScreen = storyboard.instantiateViewController(withIdentifier: "StoreScreen") as! StoreScreen
         vc.modalPresentationStyle = .fullScreen
