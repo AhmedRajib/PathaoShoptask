@@ -7,7 +7,71 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B9BFA54C-A45D-4B4F-975A-F71FD895849B"
+            uuid = "07A6B0B9-756C-4B8E-ABBB-89BCD69A93FE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pathao Shop/Screens/StoreScreen/View/StoreScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "addItemFromStorage(notification:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "07A6B0B9-756C-4B8E-ABBB-89BCD69A93FE - ffd78c6dbf4fa080"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pathao_Shop.StoreScreen.addItemFromStorage(notification: Foundation.Notification) -&gt; ()"
+                  moduleName = "Pathao Shop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MacBook/Desktop/Pathao%20Shop%206.09.28%20PM/Pathao%20Shop/Screens/StoreScreen/View/StoreScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "07A6B0B9-756C-4B8E-ABBB-89BCD69A93FE - ffd78c6dbf4fa080"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pathao_Shop.StoreScreen.addItemFromStorage(notification: Foundation.Notification) -&gt; ()"
+                  moduleName = "Pathao Shop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MacBook/Desktop/Pathao%20Shop%206.09.28%20PM/Pathao%20Shop/Screens/StoreScreen/View/StoreScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "913">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "954A473F-78C0-410D-A1F7-CBEA5C41ACF1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pathao Shop/Screens/StoreScreen/Call/StoreScreenCell/StoreScreenCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "tappedOnAdd(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "300C0150-B9A4-419E-95E3-BABD5518E7B1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -18,38 +82,6 @@
             endingLineNumber = "46"
             landmarkName = "addCound(notification:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B9BFA54C-A45D-4B4F-975A-F71FD895849B - b81091d9caaa7af6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Pathao_Shop.HomeScreen.addCound(notification: Foundation.Notification) -&gt; ()"
-                  moduleName = "Pathao Shop"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MacBook/Desktop/Pathao%20Shop%206.09.28%20PM/Pathao%20Shop/Screens/HomeScreen/Extensions/Extensions.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "123">
-               </Location>
-               <Location
-                  uuid = "B9BFA54C-A45D-4B4F-975A-F71FD895849B - b81091d9caaa7af6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Pathao_Shop.HomeScreen.addCound(notification: Foundation.Notification) -&gt; ()"
-                  moduleName = "Pathao Shop"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MacBook/Desktop/Pathao%20Shop%206.09.28%20PM/Pathao%20Shop/Screens/HomeScreen/Extensions/Extensions.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "207">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

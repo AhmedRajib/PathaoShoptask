@@ -83,10 +83,12 @@ class CategoryListScreen: UIViewController {
     }
     
     @IBAction func backBtnTapped(_ sender: UIButton) {
+        debugPrint("TotalCounbt ", HomeScreenViewModel.totalAddItems)
+        Constant.showScreenFrom = .homeScreen
         dismiss(animated: true)
-//        {
-//            NotificationCenter.default.post(name: .reloadCollectionView, object: nil)
-//        }
+        {
+            NotificationCenter.default.post(name: .reloadCollectionView, object: nil)
+        }
     }
 
 }

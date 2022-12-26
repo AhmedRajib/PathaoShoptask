@@ -26,6 +26,7 @@ class HomeScreen: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        setupNavigationBarButtonItem()
+        setupNavigationBarButtonItem()
     }
     
     private func _initViewModel() {

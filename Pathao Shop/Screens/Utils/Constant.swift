@@ -14,4 +14,6 @@ enum FromScreen {
 }
 struct Constant {
     static var showScreenFrom: FromScreen = .homeScreen
+    static var totalItemPrice = 0
+
 }

@@ -100,6 +100,9 @@ extension HomeScreen {
     }
     
     @objc func buttonAction() {
-        
+        let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
+        let vc: StoreScreen = storyboard.instantiateViewController(withIdentifier: "StoreScreen") as! StoreScreen
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
 }

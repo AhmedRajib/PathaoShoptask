@@ -18,6 +18,10 @@
 		427D70E029523C6400751781 /* pathao-shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 427D70DF29523C6400751781 /* pathao-shop.json */; };
 		427D70E2295243A200751781 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427D70E1295243A200751781 /* Model.swift */; };
 		42ADAB2B29572B85001F125C /* Extension + NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADAB2A29572B85001F125C /* Extension + NotificationCenter.swift */; };
+		42B2B3B82959918100AB143A /* Extensions + StoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2B3B72959918100AB143A /* Extensions + StoreScreen.swift */; };
+		42B2B3BB2959919600AB143A /* StoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2B3BA2959919600AB143A /* StoreScreen.swift */; };
+		42B2B3BE295991AE00AB143A /* StoreScreenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B2B3BC295991AE00AB143A /* StoreScreenCell.xib */; };
+		42B2B3BF295991AE00AB143A /* StoreScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2B3BD295991AE00AB143A /* StoreScreenCell.swift */; };
 		42DB5E6529579D6700788CF4 /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DB5E6429579D6700788CF4 /* CustomHeaderView.xib */; };
 		42DB5E6729579D8A00788CF4 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DB5E6629579D8A00788CF4 /* CustomHeaderView.swift */; };
 		42DB5E6A2957A46800788CF4 /* CategoryListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DB5E692957A46800788CF4 /* CategoryListScreen.swift */; };
@@ -47,6 +51,10 @@
 		427D70DF29523C6400751781 /* pathao-shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pathao-shop.json"; sourceTree = "<group>"; };
 		427D70E1295243A200751781 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		42ADAB2A29572B85001F125C /* Extension + NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + NotificationCenter.swift"; sourceTree = "<group>"; };
+		42B2B3B72959918100AB143A /* Extensions + StoreScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions + StoreScreen.swift"; sourceTree = "<group>"; };
+		42B2B3BA2959919600AB143A /* StoreScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreScreen.swift; sourceTree = "<group>"; };
+		42B2B3BC295991AE00AB143A /* StoreScreenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreScreenCell.xib; sourceTree = "<group>"; };
+		42B2B3BD295991AE00AB143A /* StoreScreenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreScreenCell.swift; sourceTree = "<group>"; };
 		42DB5E6429579D6700788CF4 /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
 		42DB5E6629579D8A00788CF4 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 		42DB5E692957A46800788CF4 /* CategoryListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListScreen.swift; sourceTree = "<group>"; };
@@ -80,25 +88,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		4277192229577023001A9CF9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		427719232957702A001A9CF9 /* Call */ = {
 			isa = PBXGroup;
 			children = (
+				42B2B3BD295991AE00AB143A /* StoreScreenCell.swift */,
+				42B2B3BC295991AE00AB143A /* StoreScreenCell.xib */,
 			);
 			path = Call;
-			sourceTree = "<group>";
-		};
-		4277192429577032001A9CF9 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		427D70BC29523A1E00751781 = {
@@ -185,9 +181,9 @@
 		427D70E829524A2500751781 /* StoreScreen */ = {
 			isa = PBXGroup;
 			children = (
-				4277192429577032001A9CF9 /* Extension */,
+				42B2B3B92959918C00AB143A /* View */,
+				42B2B3B62959917500AB143A /* Extensions */,
 				427719232957702A001A9CF9 /* Call */,
-				4277192229577023001A9CF9 /* View */,
 				4277192129577019001A9CF9 /* ViewModel */,
 			);
 			path = StoreScreen;
@@ -226,6 +222,22 @@
 				4203C6AD2958C220008E3497 /* Constant.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		42B2B3B62959917500AB143A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				42B2B3B72959918100AB143A /* Extensions + StoreScreen.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		42B2B3B92959918C00AB143A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42B2B3BA2959919600AB143A /* StoreScreen.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		42DB5E6129579C4500788CF4 /* SectionHeaderView */ = {
@@ -356,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B2B3BE295991AE00AB143A /* StoreScreenCell.xib in Resources */,
 				A0DA0BE729532DE20077C4FE /* ProductItemCell.xib in Resources */,
 				A0DA0BE229532DA20077C4FE /* PathaoShopList.xib in Resources */,
 				427D70E029523C6400751781 /* pathao-shop.json in Resources */,
@@ -418,11 +431,14 @@
 				42DB5E6A2957A46800788CF4 /* CategoryListScreen.swift in Sources */,
 				A0DA0BE629532DE20077C4FE /* ProductItemCell.swift in Sources */,
 				A0DA0BEC295336180077C4FE /* Extensions.swift in Sources */,
+				42B2B3B82959918100AB143A /* Extensions + StoreScreen.swift in Sources */,
 				A0DA0BE9295331CD0077C4FE /* HomeScreenViewModel.swift in Sources */,
 				427D70E2295243A200751781 /* Model.swift in Sources */,
 				42DB5E6729579D8A00788CF4 /* CustomHeaderView.swift in Sources */,
+				42B2B3BF295991AE00AB143A /* StoreScreenCell.swift in Sources */,
 				427D70CD29523A1E00751781 /* HomeScreen.swift in Sources */,
 				4203C6AE2958C220008E3497 /* Constant.swift in Sources */,
+				42B2B3BB2959919600AB143A /* StoreScreen.swift in Sources */,
 				42ADAB2B29572B85001F125C /* Extension + NotificationCenter.swift in Sources */,
 				427D70C929523A1E00751781 /* AppDelegate.swift in Sources */,
 				A0DA0BE129532DA20077C4FE /* PathaoShopList.swift in Sources */,
