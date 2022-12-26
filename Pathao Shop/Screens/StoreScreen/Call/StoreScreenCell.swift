@@ -71,7 +71,10 @@ class StoreScreenCell: UITableViewCell {
     @IBAction func tappedOnAdd(_ sender: UIButton) {
         print("removedItem ", sender.tag)
 //        NotificationCenter.default.post(name: .totalPrice, object: nil)
-        NotificationCenter.default.post(name: .addItemFromStoreScreen, object: item)
+        if let item {
+            addItem(searchItem: item)
+            NotificationCenter.default.post(name: .addItemFromStoreScreen, object: item)
+        }
     }
     
     func addItem(searchItem: Item) {
@@ -80,11 +83,14 @@ class StoreScreenCell: UITableViewCell {
             if let shopItem = shopItemList.items {
                 for (index,value) in shopItem.enumerated() {
                     if value == searchItem {
-                        if (HomeScreenViewModel.productLists[inde].items?[index].count!)! < 5 {
-                            HomeScreenViewModel.productLists[inde].items?[index].count! += 1
+//                        if (HomeScreenViewModel.productLists[inde].items?[index].count!)! < 5 {
+//                            HomeScreenViewModel.productLists[inde].items?[index].count! += 1
+////                            ViewModel?.totalAddItems += 1
+//                            HomeScreenViewModel.totalAddItems += 1
+//                        }
+                        HomeScreenViewModel.productLists[inde].items?[index].count! += 1
 //                            ViewModel?.totalAddItems += 1
-                            HomeScreenViewModel.totalAddItems += 1
-                        }
+                        HomeScreenViewModel.totalAddItems += 1
                     }
                 }
             }

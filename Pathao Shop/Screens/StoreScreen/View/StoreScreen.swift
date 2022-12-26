@@ -60,12 +60,12 @@ class StoreScreen: UIViewController {
         var inde = 0
         for shopItemList in HomeScreenViewModel.productLists {
             if let shopItem = shopItemList.items {
-                for (index,value) in shopItem.enumerated() {
-                    if value == searchItem {
-                        if (HomeScreenViewModel.productLists[inde].items?[index].count!)! < 5 {
-                            HomeScreenViewModel.productLists[inde].items?[index].count! += 1
-                            HomeScreenViewModel.totalAddItems += 1
-                        }
+                for (index,item) in shopItem.enumerated() {
+                    if item == searchItem {
+//                        debugPrint("Hooo ",item.name, " ",index)
+                        debugPrint("gii ",selectedItemLists[index].name)
+                        selectedItemLists[index].count! += 1
+                        debugPrint("Totasl Count ",selectedItemLists.count)
                     }
                 }
             }
@@ -96,7 +96,7 @@ class StoreScreen: UIViewController {
     @objc func addItemFromStorage(notification: Notification) {
         if let selectedItem = (notification.object as? Item) {
             addItemInto(searchItem: selectedItem)
-            getSelectedInfo()
+//            getSelectedInfo()
         }
     }
     
